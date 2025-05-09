@@ -16,6 +16,17 @@ public class BulletReflector : MonoBehaviour
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
+        if (collision.transform.tag == "Wall") reflectBullet(collision);
+        else dealDamage();
+    }
+
+    private void dealDamage()
+    {
+        Destroy(this.gameObject);
+    }
+
+    private void reflectBullet(Collision2D collision)
+    {
         float collisionAngle = 90 + Vector2.SignedAngle(-transform.up, collision.contacts[0].normal);
         Debug.Log(collisionAngle);
         this.transform.Rotate(0, 0, collisionAngle * 2);
