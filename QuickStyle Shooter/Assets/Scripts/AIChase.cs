@@ -25,7 +25,7 @@ public class AIChase : MonoBehaviour
             //Spawn in bullets
             Debug.Log("WithinRange");
             ExplodeMan.enabled = false;
-            Destroy(this);
+            Destroy(this.gameObject);
 
         }
     }
