@@ -9,6 +9,7 @@ public class BulletReflector : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private float moveSpeed;
+    [SerializeField] private String reflictiveTag = "Wall";
     public void Start()
     {
         rb.velocity = transform.up * this.moveSpeed;
@@ -16,7 +17,7 @@ public class BulletReflector : MonoBehaviour
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.transform.tag == "Wall") reflectBullet(collision);
+        if (collision.transform.tag.Equals(reflictiveTag)) reflectBullet(collision);
         else dealDamage();
     }
 
@@ -28,7 +29,6 @@ public class BulletReflector : MonoBehaviour
     private void reflectBullet(Collision2D collision)
     {
         float collisionAngle = 90 + Vector2.SignedAngle(-transform.up, collision.contacts[0].normal);
-        Debug.Log(collisionAngle);
         this.transform.Rotate(0, 0, collisionAngle * 2);
         rb.velocity = transform.up * this.moveSpeed;
     }
