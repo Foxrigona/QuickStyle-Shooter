@@ -26,7 +26,6 @@ public class AIChase : MonoBehaviour
             Debug.Log("WithinRange");
             ExplodeMan.enabled = false;
             Destroy(this.gameObject);
-
         }
     }
 }

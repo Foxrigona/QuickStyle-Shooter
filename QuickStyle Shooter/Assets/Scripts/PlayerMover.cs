@@ -22,7 +22,7 @@ public class PlayerMover : MonoBehaviour
     public void Update()
     {
         handleMovement();
-        if (Input.GetKeyDown(KeyCode.Q) && !isDashing)
+        if (Input.GetMouseButtonDown(1) && !isDashing)
         {
             isDashing = true;
             this.originalPos = new Vector3(transform.position.x, transform.position.y);
