@@ -1048,9 +1048,15 @@ MonoBehaviour:
   lines:
   - Font - Riemann Theatre Font by Chequered Ink
   - Unity simple 2D Enemy AI Follow Tutorial by MoreBBlakeyyy
-  - Unity simple 2D Enemy AI Follow Tutorial by MoreBBlakeyyy
   - 'Alien UFO Pack by Kenney '
   - Scribble Platformer by Kenny
+  - Video Game 7.wav by djgriffin on Freesound
+  - ' Upbeat Joy (30s) by Universfield on Freesound'
+  - Somber Music Theme by TheoJT on Freesound
+  - Retro video game sfx - Plop by OwlStorm on Freesound
+  - dash.wav by perduus on Freesound
+  - kicks bass impacts subs by CVLTIV8R on Freesound
+  - Retro video game sfx - Whimper by OwlStorm on Freesound
   textSpeed: 0.03
 --- !u!114 &1744915250
 MonoBehaviour:
