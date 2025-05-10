@@ -29,4 +29,11 @@ public abstract class Shooter : MonoBehaviour
         return spawnPosition;
     }
 
+    protected Vector2 bulletSpawnPosition(Vector3 targetPosition)
+    {
+        Vector2 directionalVector = (targetPosition - this.transform.position).normalized;
+        Vector2 spawnPosition = directionalVector * radius + new Vector2(transform.position.x, transform.position.y);
+        return spawnPosition;
+    }
+
 }
