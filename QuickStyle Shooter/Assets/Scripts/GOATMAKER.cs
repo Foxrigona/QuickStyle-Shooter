@@ -6,6 +6,7 @@ public class GOATMAKER : MonoBehaviour
 {
     public GameObject[] Enemies;
     public GameObject GOAT;
+    public AudioSource bleat;
 
     [SerializeField] float remainingTime = 20;
 
@@ -17,6 +18,7 @@ public class GOATMAKER : MonoBehaviour
 
         if (seconds <= 0)
         {
+            bleat.Play();
             for (int i = 0; i <= 5; i++)
             {
                 this.remainingTime = 20;
