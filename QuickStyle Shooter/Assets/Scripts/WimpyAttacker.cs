@@ -5,9 +5,13 @@ using UnityEngine;
 public class WimpyAttacker : Shooter
 {
     [SerializeField] protected float shootingDelay = 1f;
+    public AudioSource shoot;
+    public GameObject player;
+
     override
     public void attack()
     {
+        shoot.Play();
         Instantiate(this.bullet, bulletSpawnPosition(), Quaternion.AngleAxis(calculateRotation(), Vector3.forward));
     }
 
@@ -20,8 +24,8 @@ public class WimpyAttacker : Shooter
     {
         while (true)
         {
+            yield return new WaitForSeconds(shootingDelay + Random.Range(-shootingDelay, 2));
             attack();
-            yield return new WaitForSeconds(shootingDelay);
         }
     }
 }

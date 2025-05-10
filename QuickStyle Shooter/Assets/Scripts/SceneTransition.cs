@@ -11,6 +11,11 @@ public class SceneTransition : MonoBehaviour
         SceneManager.LoadScene("TitleScreen");
     }
 
+    public static void Win()
+    {
+        SceneManager.LoadScene("Win");
+    }
+
     public void StartGame()
     {
         SceneManager.LoadScene("Game");
