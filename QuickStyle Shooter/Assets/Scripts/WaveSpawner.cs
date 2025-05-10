@@ -73,7 +73,7 @@ public class WaveSpawner : MonoBehaviour
     void WaveTwo()
     {
         Debug.Log("Wave2 Start");
-        remainingTime = 120;
+        remainingTime = 10;//120
         t.setRemainingTime(remainingTime);
 
         //Spawn
@@ -88,7 +88,7 @@ public class WaveSpawner : MonoBehaviour
     void WaveThree()
     {
         Debug.Log("Wave3 Start");
-        remainingTime = 180;
+        remainingTime = 10;//240
         t.setRemainingTime(remainingTime);
 
         //Spawn
@@ -98,25 +98,26 @@ public class WaveSpawner : MonoBehaviour
             Vector2 position = new Vector2(transform.position.x, spawnPoints[randomHeight].position.y);
 
             Instantiate(obstaclesTemplate[0], position, Quaternion.identity);
-            //Instantiate(obstaclesTemplate[1], position, Quaternion.identity);
+            Instantiate(obstaclesTemplate[1], position, Quaternion.identity);
         }
     }
     void WaveFour()
     {
         Debug.Log("Wave4 Start");
-        remainingTime = 240;
+        remainingTime = 10;//240
         t.setRemainingTime(remainingTime);
+
+        int randomHeight = Random.Range(0, spawnPoints.Length);
+        Vector2 position = new Vector2(transform.position.x, spawnPoints[randomHeight].position.y);
+        Instantiate(obstaclesTemplate[2], position, Quaternion.identity);
 
         //Spawn
         for (int i = 0; i < 30; i++)
         {
-            int randomHeight = Random.Range(0, spawnPoints.Length);
-            Vector2 position = new Vector2(transform.position.x, spawnPoints[randomHeight].position.y);
 
             Instantiate(obstaclesTemplate[0], position, Quaternion.identity);
-            //Instantiate(obstaclesTemplate[1], position, Quaternion.identity);
-            //Instantiate(obstaclesTemplate[2], position, Quaternion.identity);
+            Instantiate(obstaclesTemplate[1], position, Quaternion.identity);
         }
-
+        
     }
 }
