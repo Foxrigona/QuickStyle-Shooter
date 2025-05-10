@@ -12,6 +12,11 @@ public class AIRun : MonoBehaviour
 
     public Renderer ExplodeMan;
 
+    void Start()
+    {
+        player = GameObject.FindGameObjectsWithTag("Player")[0];
+    }
+
     // Update is called once per frame
     void Update()
     {
