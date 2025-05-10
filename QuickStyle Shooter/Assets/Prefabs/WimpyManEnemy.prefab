@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2117373952842356877}
   - component: {fileID: 4393603993907277319}
   - component: {fileID: 1080097430348880125}
+  - component: {fileID: 7510606480376796157}
   m_Layer: 0
   m_Name: WimpyManEnemy
   m_TagString: Untagged
@@ -165,3 +166,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &7510606480376796157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7016623467265478201}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcd7aac989ea04b4fb79dfb05c606d25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 8840617899332159424, guid: c45307720761493448bdc1413c90e39d, type: 3}
+  radius: 1
+  shootingDelay: 1
