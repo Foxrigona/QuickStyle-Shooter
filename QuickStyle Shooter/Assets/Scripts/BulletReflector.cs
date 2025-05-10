@@ -10,6 +10,7 @@ public class BulletReflector : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private float moveSpeed;
     [SerializeField] private String reflictiveTag = "Wall";
+    [SerializeField] int damageAmount = 7;
     public void Start()
     {
         rb.velocity = transform.up * this.moveSpeed;
@@ -18,11 +19,12 @@ public class BulletReflector : MonoBehaviour
     public void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.transform.tag.Equals(reflictiveTag)) reflectBullet(collision);
-        else dealDamage();
+        else dealDamage(collision.transform.GetComponent<Health>());
     }
 
-    private void dealDamage()
+    private void dealDamage(Health health)
     {
+        health?.decreaseHealth(this.damageAmount);
         Destroy(this.gameObject);
     }
 
