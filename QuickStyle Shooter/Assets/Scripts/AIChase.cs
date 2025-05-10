@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+[RequireComponent(typeof(BomberAttacker))]
 public class AIChase : MonoBehaviour
 {
     public GameObject player;
@@ -24,8 +24,7 @@ public class AIChase : MonoBehaviour
         {
             //Spawn in bullets
             Debug.Log("WithinRange");
-            ExplodeMan.enabled = false;
-            Destroy(this.gameObject);
+            GetComponent<BomberAttacker>().attack();
         }
     }
 }

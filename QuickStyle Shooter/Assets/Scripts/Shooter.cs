@@ -22,6 +22,13 @@ public abstract class Shooter : MonoBehaviour
         return angle;
     }
 
+    protected float calculateRotation(Vector3 targetPosition)
+    {
+        float angle = -180 - Vector2.SignedAngle(this.transform.position - targetPosition, Vector2.up);
+        Debug.Log(angle);
+        return angle;
+    }
+
     protected Vector2 bulletSpawnPosition()
     {
         Vector2 directionalVector = (target.position - this.transform.position).normalized;
