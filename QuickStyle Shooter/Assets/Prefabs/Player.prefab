@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6647249491940812027}
   - component: {fileID: 2481808358417910755}
   - component: {fileID: 2752855092776489950}
+  - component: {fileID: 173736049772384036}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -162,6 +163,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 2
-  rb: {fileID: 0}
+  rb: {fileID: 2481808358417910755}
   dashFactor: 1
   dashTime: 0.1
+  dashNoise: {fileID: 0}
+--- !u!114 &173736049772384036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8762752121359278638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4fae631b571aed48ba5fddb8438f19f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 8840617899332159424, guid: c45307720761493448bdc1413c90e39d, type: 3}
+  radius: 1
