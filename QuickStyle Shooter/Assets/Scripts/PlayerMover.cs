@@ -15,10 +15,13 @@ public class PlayerMover : MonoBehaviour
     private Vector3 newPos;
     private float dashTimer = 0f;
 
+
+    private Rigidbody2D killer;
     public AudioSource dashNoise;
 
     public void Start()
     {
+        killer = GetComponent<Rigidbody2D>();
         rb = GetComponent<Rigidbody2D>();
     }
     public void Update()
@@ -78,6 +81,17 @@ public class PlayerMover : MonoBehaviour
         else
         {
             movementVector.x = 0;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Wall"))
+        {
+            //ADD A HEALTH DROP
+            Debug.Log("In a wall. Kill them");
+
+            
         }
     }
 }

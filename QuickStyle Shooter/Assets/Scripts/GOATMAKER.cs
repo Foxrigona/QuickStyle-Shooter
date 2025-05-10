@@ -21,7 +21,7 @@ public class GOATMAKER : MonoBehaviour
             {
                 this.remainingTime = 20;
                 Vector2 position = new Vector2(GOAT.transform.position.x, GOAT.transform.position.y);
-                Instantiate(/*Enemies[Random.Range(0, 2)]*/Enemies[0], position, Quaternion.identity);
+                Instantiate(Enemies[Random.Range(0, 2)], position, Quaternion.identity);
             }
         }
     }

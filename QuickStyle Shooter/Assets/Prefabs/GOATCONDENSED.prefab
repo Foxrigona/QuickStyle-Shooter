@@ -99,5 +99,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Enemies:
   - {fileID: 7016623467265478201, guid: feeafbc10d6bf8947929ba1c9d77ba0d, type: 3}
+  - {fileID: 5762067211919128893, guid: 251836258a4358c4b9848e7c372fdb68, type: 3}
   GOAT: {fileID: 57154233571110454}
   remainingTime: 10
