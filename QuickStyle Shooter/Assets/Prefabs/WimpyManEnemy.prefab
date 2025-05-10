@@ -142,7 +142,7 @@ GameObject:
   - component: {fileID: 4393603993907277319}
   - component: {fileID: 1080097430348880125}
   - component: {fileID: 7510606480376796157}
-  - component: {fileID: 536068451574883118}
+  - component: {fileID: -54189778932866603}
   m_Layer: 0
   m_Name: WimpyManEnemy
   m_TagString: Untagged
@@ -313,7 +313,7 @@ MonoBehaviour:
   shootingDelay: 1
   shoot: {fileID: 2000068541442678875}
   player: {fileID: 0}
---- !u!114 &536068451574883118
+--- !u!114 &-54189778932866603
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
