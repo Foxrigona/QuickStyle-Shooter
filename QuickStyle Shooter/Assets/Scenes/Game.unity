@@ -12209,6 +12209,8 @@ MonoBehaviour:
   waveNum: 1
   obstaclesTemplate:
   - {fileID: 7016623467265478201, guid: feeafbc10d6bf8947929ba1c9d77ba0d, type: 3}
+  - {fileID: 5762067211919128893, guid: 251836258a4358c4b9848e7c372fdb68, type: 3}
+  - {fileID: 57154233571110454, guid: d367f26b7cf9e2049b5b52b107dacc8c, type: 3}
   spawnPoints:
   - {fileID: 647071421}
   - {fileID: 151253597}
