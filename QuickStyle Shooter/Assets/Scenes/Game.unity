@@ -4359,7 +4359,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 473.4, y: 190.4}
+  m_AnchoredPosition: {x: 482, y: 190.4}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &670867236
@@ -5790,7 +5790,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 206.58823, y: 190.4}
+  m_AnchoredPosition: {x: 215.18823, y: 190.4}
   m_SizeDelta: {x: 91.9764, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &797199064
@@ -9106,7 +9106,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9811321, g: 0.9811321, b: 0.9811321, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -10918,7 +10918,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerText: {fileID: 650909234}
-  remainingTime: 90
+  remainingTime: 10
 --- !u!114 &1536684812
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12081,6 +12081,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1678994137}
   - component: {fileID: 1678994136}
+  - component: {fileID: 1678994138}
   m_Layer: 0
   m_Name: Spawners
   m_TagString: Untagged
@@ -12095,7 +12096,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1678994135}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: baef2418235440d47bb8049ec73454d1, type: 3}
   m_Name: 
@@ -12129,6 +12130,28 @@ Transform:
   - {fileID: 1677301913}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1678994138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1678994135}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 555a3b39206f85d45a5f686f74ef7465, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  remainingTime: 10
+  waveNum: 1
+  obstaclesTemplate:
+  - {fileID: 7016623467265478201, guid: feeafbc10d6bf8947929ba1c9d77ba0d, type: 3}
+  spawnPoints:
+  - {fileID: 647071421}
+  - {fileID: 151253597}
+  - {fileID: 1991863183}
+  - {fileID: 1178861693}
+  - {fileID: 1677301913}
 --- !u!1 &1691151790
 GameObject:
   m_ObjectHideFlags: 0
@@ -13397,7 +13420,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.36862746}
+  m_Color: {r: 0.81886786, g: 0.81886786, b: 0.81886786, a: 0.75686276}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -14127,6 +14150,18 @@ PrefabInstance:
     - target: {fileID: 3165384527628681580, guid: 6e896b09f2fa81a49ac660610105cad0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6883800523203907351, guid: 6e896b09f2fa81a49ac660610105cad0, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6883800523203907351, guid: 6e896b09f2fa81a49ac660610105cad0, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6883800523203907351, guid: 6e896b09f2fa81a49ac660610105cad0, type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8762752121359278638, guid: 6e896b09f2fa81a49ac660610105cad0, type: 3}
       propertyPath: m_Name
