@@ -10,7 +10,7 @@ public class WaveSpawner : MonoBehaviour
 
     public GameObject[] obstaclesTemplate;
     public Transform[] spawnPoints;
-
+    public AudioSource spawn;
 
     void Start()
     {
@@ -28,6 +28,7 @@ public class WaveSpawner : MonoBehaviour
 
         if (remainingTime <= 0)
         {
+            spawn.Play();
             Debug.Log("End of Wave");
             waveNum++;
 
@@ -43,6 +44,10 @@ public class WaveSpawner : MonoBehaviour
             else if (waveNum == 4)
             {
                 WaveFour();
+            }
+            else if(waveNum  == 5)
+            {
+                SceneTransition.Win();
             }
 
         }
