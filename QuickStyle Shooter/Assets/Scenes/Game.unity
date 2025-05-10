@@ -5658,6 +5658,7 @@ GameObject:
   - component: {fileID: 768558984}
   - component: {fileID: 768558983}
   - component: {fileID: 768558985}
+  - component: {fileID: 768558986}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -5843,6 +5844,21 @@ MonoBehaviour:
   speed: 1
   inDistanceExplode: 1
   ExplodeMan: {fileID: 1952591923}
+--- !u!114 &768558986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 768558978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89746f91ddf1fce4ab53dd5479835c13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 8840617899332159424, guid: c45307720761493448bdc1413c90e39d, type: 3}
+  radius: 1
+  bulletcount: 5
 --- !u!1 &797199062
 GameObject:
   m_ObjectHideFlags: 0
