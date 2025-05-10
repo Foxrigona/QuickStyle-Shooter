@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneTransition : MonoBehaviour
 {
+  
     public static void TitleScreen()
     {
         SceneManager.LoadScene("TitleScreen");

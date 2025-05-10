@@ -15,6 +15,8 @@ public class PlayerMover : MonoBehaviour
     private Vector3 newPos;
     private float dashTimer = 0f;
 
+    public AudioSource dashNoise;
+
     public void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -44,6 +46,7 @@ public class PlayerMover : MonoBehaviour
     {
         Debug.Log(dashTimer);
         transform.position = Vector3.Lerp(originalPos, newPos, dashTimer/dashTime);
+        dashNoise.Play();
     }
 
     private void handleMovement()
