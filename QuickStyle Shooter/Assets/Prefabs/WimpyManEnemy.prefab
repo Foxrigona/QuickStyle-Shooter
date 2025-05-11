@@ -270,7 +270,7 @@ GameObject:
   - component: {fileID: 4393603993907277319}
   - component: {fileID: 1080097430348880125}
   - component: {fileID: 7510606480376796157}
-  - component: {fileID: -54189778932866603}
+  - component: {fileID: -8531676121763858509}
   m_Layer: 0
   m_Name: WimpyManEnemy
   m_TagString: Untagged
@@ -442,7 +442,7 @@ MonoBehaviour:
   shootingDelay: 1
   shoot: {fileID: 2000068541442678875}
   player: {fileID: 0}
---- !u!114 &-54189778932866603
+--- !u!114 &-8531676121763858509
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -451,7 +451,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7016623467265478201}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5164dfc5089b20649b314b53e9db729f, type: 3}
+  m_Script: {fileID: 11500000, guid: 4edf0f340f40dd449a0058735036fc42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 7

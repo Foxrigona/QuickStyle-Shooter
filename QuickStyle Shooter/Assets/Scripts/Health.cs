@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Health : MonoBehaviour
+public abstract class Health : MonoBehaviour
 {
     [SerializeField] protected int maxHealth = 100;
     [SerializeField] protected int currentHealth;
-    [SerializeField] private GameObject deathSound;
+    [SerializeField] protected GameObject deathSound;
     
 
     public void Start()
@@ -20,9 +20,5 @@ public class Health : MonoBehaviour
         if (this.currentHealth <= 0) kill();
     }
 
-    protected void kill()
-    {
-        Instantiate(deathSound);
-        Destroy(this.gameObject);
-    }
+    protected abstract void kill();
 }

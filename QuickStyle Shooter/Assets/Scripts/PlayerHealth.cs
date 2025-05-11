@@ -21,8 +21,12 @@ public class PlayerHealth : Health
         this.currentHealth = Mathf.Clamp(currentHealth - damageDealt, 0, this.maxHealth);
         healthDisplayer.changeHealth(this.maxHealth, this.currentHealth);
         StartCoroutine(DamageShower());
-        if(currentHealth == 0)
-            SceneTransition.Lose();
+        if (currentHealth == 0) kill();
+    }
+
+    protected override void kill()
+    {
+        SceneTransition.Lose();
     }
 
     public IEnumerator DamageShower()

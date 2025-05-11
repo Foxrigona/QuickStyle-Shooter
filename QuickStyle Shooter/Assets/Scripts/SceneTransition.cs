@@ -19,6 +19,7 @@ public class SceneTransition : MonoBehaviour
     public void StartGame()
     {
         SceneManager.LoadScene("Game");
+        EnemyHealth.resetKillCount();
     }
 
     public void Credits()

@@ -237,6 +237,7 @@ GameObject:
   - component: {fileID: 101278524}
   - component: {fileID: 101278526}
   - component: {fileID: 101278525}
+  - component: {fileID: 101278527}
   m_Layer: 5
   m_Name: Text (TMP) (1)
   m_TagString: Untagged
@@ -346,7 +347,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -310.103, w: 0}
+  m_margin: {x: -105.51355, y: 0, z: -410.5922, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -360,6 +361,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 101278523}
   m_CullTransparentMesh: 1
+--- !u!114 &101278527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 101278523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c432cc9e9378cdd478caf6feab98dff0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &145079595
 GameObject:
   m_ObjectHideFlags: 0

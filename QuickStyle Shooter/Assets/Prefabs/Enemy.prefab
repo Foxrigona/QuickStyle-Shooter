@@ -144,7 +144,7 @@ GameObject:
   - component: {fileID: 4210244306565912588}
   - component: {fileID: 1348920550802518327}
   - component: {fileID: 4656752385757549375}
-  - component: {fileID: 4570940038257614990}
+  - component: {fileID: 3702931725352265414}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -346,7 +346,7 @@ MonoBehaviour:
   bullet: {fileID: 8840617899332159424, guid: c45307720761493448bdc1413c90e39d, type: 3}
   radius: 1
   bulletcount: 12
---- !u!114 &4570940038257614990
+--- !u!114 &3702931725352265414
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -355,7 +355,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5762067211919128893}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5164dfc5089b20649b314b53e9db729f, type: 3}
+  m_Script: {fileID: 11500000, guid: 4edf0f340f40dd449a0058735036fc42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 7
