@@ -12,7 +12,6 @@ public class BomberAttacker : Shooter
             float angle = 360f/bulletcount * i + 45;
             Quaternion posRotation = Quaternion.AngleAxis(angle, Vector3.forward);
             Vector3 direction = (posRotation * Vector3.up);
-            Debug.Log(this.transform.position + direction.normalized * this.radius);
             Instantiate(bullet, this.transform.position + direction.normalized * this.radius, posRotation);
         }
         Destroy(gameObject);

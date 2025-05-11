@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-    [SerializeField] private int maxHealth = 100;
-    [SerializeField] private int currentHealth;
+    [SerializeField] protected int maxHealth = 100;
+    [SerializeField] protected int currentHealth;
     [SerializeField] private GameObject deathSound;
     
 
@@ -16,11 +16,11 @@ public class Health : MonoBehaviour
 
     public void decreaseHealth(int damageDealt)
     {
-        this.currentHealth -= damageDealt;
+        this.currentHealth = Mathf.Clamp(currentHealth - damageDealt,0,this.maxHealth);
         if (this.currentHealth <= 0) kill();
     }
 
-    public void kill()
+    protected void kill()
     {
         Instantiate(deathSound);
         Destroy(this.gameObject);

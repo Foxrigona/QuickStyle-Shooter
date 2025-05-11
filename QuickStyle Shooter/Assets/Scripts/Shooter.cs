@@ -18,7 +18,6 @@ public abstract class Shooter : MonoBehaviour
     protected float calculateRotation()
     {
         float angle = - 180 - Vector2.SignedAngle(this.transform.position - target.position, Vector2.up);
-        Debug.Log(angle);
         return angle;
     }
 

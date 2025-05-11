@@ -19,12 +19,20 @@ public class BulletReflector : MonoBehaviour
     public void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.transform.tag.Equals(reflictiveTag)) reflectBullet(collision);
-        else dealDamage(collision.transform.GetComponent<Health>());
+        else
+        {
+            dealDamage(collision.transform.GetComponent<Health>());
+        }
     }
 
     private void dealDamage(Health health)
     {
-        health?.decreaseHealth(this.damageAmount);
+        if(health == null) Destroy(this.gameObject);
+        if (health  is PlayerHealth){
+            PlayerHealth h = health as PlayerHealth;
+            h.decreaseHealth(this.damageAmount);
+        }
+        else health?.decreaseHealth(this.damageAmount);
         Destroy(this.gameObject);
     }
 

@@ -35,5 +35,10 @@ public class SceneTransition : MonoBehaviour
     {
         Application.Quit();
     }
+
+    public static void Lose()
+    {
+        SceneManager.LoadScene("Lose");
+    }
     
 }

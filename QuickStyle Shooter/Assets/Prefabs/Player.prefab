@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2481808358417910755}
   - component: {fileID: 2752855092776489950}
   - component: {fileID: 173736049772384036}
-  - component: {fileID: 7069884631818709178}
+  - component: {fileID: 2635693970494390404}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -183,7 +183,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 8840617899332159424, guid: c45307720761493448bdc1413c90e39d, type: 3}
   radius: 1
---- !u!114 &7069884631818709178
+--- !u!114 &2635693970494390404
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -192,9 +192,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 8762752121359278638}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5164dfc5089b20649b314b53e9db729f, type: 3}
+  m_Script: {fileID: 11500000, guid: bab1582e6d4e8c74b9d411849153fea9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
   currentHealth: 0
   deathSound: {fileID: 5411251255089149889, guid: 7077102c129764347bbfeb4a8907ff2e, type: 3}
+  colorChangerLength: 0.15
