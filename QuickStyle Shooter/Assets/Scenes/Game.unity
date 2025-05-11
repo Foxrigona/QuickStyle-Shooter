@@ -15162,7 +15162,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2635693970494390404, guid: 6e896b09f2fa81a49ac660610105cad0, type: 3}
       propertyPath: maxHealth
-      value: 10000
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 2752855092776489950, guid: 6e896b09f2fa81a49ac660610105cad0, type: 3}
       propertyPath: dashNoise
