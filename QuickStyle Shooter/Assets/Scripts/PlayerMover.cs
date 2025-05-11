@@ -15,12 +15,15 @@ public class PlayerMover : MonoBehaviour
     private Vector3 newPos;
     private float dashTimer = 0f;
 
+    Health h;
+    [SerializeField] float remainingTime = 10;
 
     private Rigidbody2D killer;
     public AudioSource dashNoise;
 
     public void Start()
     {
+        h = GetComponent<Health>();
         killer = GetComponent<Rigidbody2D>();
         rb = GetComponent<Rigidbody2D>();
     }
@@ -88,10 +91,17 @@ public class PlayerMover : MonoBehaviour
     {
         if (collision.CompareTag("Wall"))
         {
+            
+            int seconds = Mathf.FloorToInt(remainingTime % 60);
+            if (seconds <= 0)
+            {
+                h.decreaseHealth(100);
+            }
             //ADD A HEALTH DROP
             Debug.Log("In a wall. Kill them");
 
             
         }
     }
+    
 }
