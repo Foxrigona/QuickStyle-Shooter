@@ -7,6 +7,9 @@ public class WaveSpawner : MonoBehaviour
     [SerializeField] float remainingTime = 60; //1 minute for first wave, 2 minutes for second, 3 for third, 4 for fourth
     [SerializeField] int waveNum = 1;
     Timer t;
+    WaveSpawner ws;
+
+    [SerializeField] float CooldownTime = 10f;
 
     public GameObject[] obstaclesTemplate;
     public Transform[] spawnPoints;
@@ -15,8 +18,14 @@ public class WaveSpawner : MonoBehaviour
     void Start()
     {
         t = FindObjectOfType<Timer>();
-        
+        ws = FindObjectOfType<WaveSpawner>();
+
         WaveOne();
+    }
+    
+    private IEnumerator delay(float cool)
+    {
+        yield return new WaitForSeconds(cool);
     }
 
     // Update is called once per frame
@@ -59,12 +68,13 @@ public class WaveSpawner : MonoBehaviour
         remainingTime = 10;
         t.setRemainingTime(remainingTime);
 
+        StartCoroutine(ws.delay(CooldownTime));
         //Spawn enemies
-        for(int i=0; i<10; i++)
+        for (int i=0; i<10; i++)
         {
             //int randomObstacle = Random.Range(0, obstaclesTemplate.Length);
             int randomHeight = Random.Range(0, spawnPoints.Length);
-            Vector2 position = new Vector2(transform.position.x, spawnPoints[randomHeight].position.y);
+            Vector2 position = new Vector2(spawnPoints[randomHeight].position.x, spawnPoints[randomHeight].position.y);
 
             Instantiate(obstaclesTemplate[0], position, Quaternion.identity);
         }
@@ -80,7 +90,7 @@ public class WaveSpawner : MonoBehaviour
         for (int i = 0; i < 20; i++)
         {
             int randomHeight = Random.Range(0, spawnPoints.Length);
-            Vector2 position = new Vector2(transform.position.x, spawnPoints[randomHeight].position.y);
+            Vector2 position = new Vector2(spawnPoints[randomHeight].position.x, spawnPoints[randomHeight].position.y);
 
             Instantiate(obstaclesTemplate[0], position, Quaternion.identity);
         }
@@ -95,7 +105,7 @@ public class WaveSpawner : MonoBehaviour
         for (int i = 0; i < 20; i++)
         {
             int randomHeight = Random.Range(0, spawnPoints.Length);
-            Vector2 position = new Vector2(transform.position.x, spawnPoints[randomHeight].position.y);
+            Vector2 position = new Vector2(spawnPoints[randomHeight].position.x, spawnPoints[randomHeight].position.y);
 
             Instantiate(obstaclesTemplate[0], position, Quaternion.identity);
             Instantiate(obstaclesTemplate[1], position, Quaternion.identity);
@@ -108,13 +118,14 @@ public class WaveSpawner : MonoBehaviour
         t.setRemainingTime(remainingTime);
 
         int randomHeight = Random.Range(0, spawnPoints.Length);
-        Vector2 position = new Vector2(transform.position.x, spawnPoints[randomHeight].position.y);
+        Vector2 position = new Vector2(spawnPoints[randomHeight].position.x, spawnPoints[randomHeight].position.y);
         Instantiate(obstaclesTemplate[2], position, Quaternion.identity);
+        
 
         //Spawn
         for (int i = 0; i < 30; i++)
         {
-
+            position = new Vector2(spawnPoints[randomHeight].position.x, spawnPoints[randomHeight].position.y);
             Instantiate(obstaclesTemplate[0], position, Quaternion.identity);
             Instantiate(obstaclesTemplate[1], position, Quaternion.identity);
         }
