@@ -8839,11 +8839,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3165384527628681580, guid: 6e896b09f2fa81a49ac660610105cad0, type: 3}
   m_PrefabInstance: {fileID: 249396069846536058}
   m_PrefabAsset: {fileID: 0}
---- !u!50 &1187335247 stripped
-Rigidbody2D:
-  m_CorrespondingSourceObject: {fileID: 2481808358417910755, guid: 6e896b09f2fa81a49ac660610105cad0, type: 3}
-  m_PrefabInstance: {fileID: 249396069846536058}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1249475587
 GameObject:
   m_ObjectHideFlags: 0
@@ -14152,10 +14147,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2752855092776489950, guid: 6e896b09f2fa81a49ac660610105cad0, type: 3}
-      propertyPath: rb
-      value: 
-      objectReference: {fileID: 1187335247}
-    - target: {fileID: 2752855092776489950, guid: 6e896b09f2fa81a49ac660610105cad0, type: 3}
       propertyPath: dashNoise
       value: 
       objectReference: {fileID: 573830151}
@@ -14199,24 +14190,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6883800523203907351, guid: 6e896b09f2fa81a49ac660610105cad0, type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6883800523203907351, guid: 6e896b09f2fa81a49ac660610105cad0, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6883800523203907351, guid: 6e896b09f2fa81a49ac660610105cad0, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8762752121359278638, guid: 6e896b09f2fa81a49ac660610105cad0, type: 3}
       propertyPath: m_Name
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 8762752121359278638, guid: 6e896b09f2fa81a49ac660610105cad0, type: 3}
-      propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []

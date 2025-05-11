@@ -167,6 +167,7 @@ MonoBehaviour:
   rb: {fileID: 2481808358417910755}
   dashFactor: 1
   dashTime: 0.1
+  remainingTime: 10
   dashNoise: {fileID: 0}
 --- !u!114 &173736049772384036
 MonoBehaviour:
@@ -196,3 +197,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   currentHealth: 0
+  deathSound: {fileID: 5411251255089149889, guid: 7077102c129764347bbfeb4a8907ff2e, type: 3}

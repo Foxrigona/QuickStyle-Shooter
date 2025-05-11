@@ -6,7 +6,8 @@ public class Health : MonoBehaviour
 {
     [SerializeField] private int maxHealth = 100;
     [SerializeField] private int currentHealth;
-    public AudioSource death;
+    [SerializeField] private GameObject deathSound;
+    
 
     public void Start()
     {
@@ -16,13 +17,12 @@ public class Health : MonoBehaviour
     public void decreaseHealth(int damageDealt)
     {
         this.currentHealth -= damageDealt;
-        if (this.currentHealth < 0) kill();
+        if (this.currentHealth <= 0) kill();
     }
 
     public void kill()
     {
-        death.Play();
-        Debug.Log("Dead");
+        Instantiate(deathSound);
         Destroy(this.gameObject);
     }
 }
