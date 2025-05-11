@@ -70,7 +70,7 @@ public class WaveSpawner : MonoBehaviour
 
         StartCoroutine(ws.delay(CooldownTime));
         //Spawn enemies
-        for (int i=0; i<10; i++)
+        for (int i=0; i<30; i++)
         {
             //int randomObstacle = Random.Range(0, obstaclesTemplate.Length);
             int randomHeight = Random.Range(0, spawnPoints.Length);
@@ -87,7 +87,7 @@ public class WaveSpawner : MonoBehaviour
         t.setRemainingTime(remainingTime);
 
         //Spawn
-        for (int i = 0; i < 20; i++)
+        for (int i = 0; i < 40; i++)
         {
             int randomHeight = Random.Range(0, spawnPoints.Length);
             Vector2 position = new Vector2(spawnPoints[randomHeight].position.x, spawnPoints[randomHeight].position.y);
@@ -98,7 +98,7 @@ public class WaveSpawner : MonoBehaviour
     void WaveThree()
     {
         Debug.Log("Wave3 Start");
-        remainingTime = 10;//240
+        remainingTime = 20;//240
         t.setRemainingTime(remainingTime);
 
         //Spawn
@@ -114,21 +114,26 @@ public class WaveSpawner : MonoBehaviour
     void WaveFour()
     {
         Debug.Log("Wave4 Start");
-        remainingTime = 10;//240
+        remainingTime = 60;//240
         t.setRemainingTime(remainingTime);
 
         int randomHeight = Random.Range(0, spawnPoints.Length);
         Vector2 position = new Vector2(spawnPoints[randomHeight].position.x, spawnPoints[randomHeight].position.y);
         Instantiate(obstaclesTemplate[2], position, Quaternion.identity);
-        
+
+        randomHeight = Random.Range(0, spawnPoints.Length);
+        position = new Vector2(spawnPoints[randomHeight].position.x, spawnPoints[randomHeight].position.y);
+        Instantiate(obstaclesTemplate[2], position, Quaternion.identity);
 
         //Spawn
         for (int i = 0; i < 30; i++)
         {
+            randomHeight = Random.Range(0, spawnPoints.Length);
             position = new Vector2(spawnPoints[randomHeight].position.x, spawnPoints[randomHeight].position.y);
             Instantiate(obstaclesTemplate[0], position, Quaternion.identity);
             Instantiate(obstaclesTemplate[1], position, Quaternion.identity);
         }
         
+
     }
 }

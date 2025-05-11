@@ -8,7 +8,7 @@ public class GOATMAKER : MonoBehaviour
     public GameObject GOAT;
     public AudioSource bleat;
 
-    [SerializeField] float remainingTime = 20;
+    [SerializeField] float remainingTime = 10;
 
     // Update is called once per frame
     void Update()
@@ -19,9 +19,9 @@ public class GOATMAKER : MonoBehaviour
         if (seconds <= 0)
         {
             bleat.Play();
-            for (int i = 0; i <= 5; i++)
+            for (int i = 0; i <= 40; i++)
             {
-                this.remainingTime = 20;
+                this.remainingTime = 10;
                 Vector2 position = new Vector2(GOAT.transform.position.x, GOAT.transform.position.y);
                 Instantiate(Enemies[Random.Range(0, 2)], position, Quaternion.identity);
             }
