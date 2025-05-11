@@ -27,6 +27,7 @@ public class PlayerHealth : Health
 
     public IEnumerator DamageShower()
     {
+        r = GetComponent<SpriteRenderer>();
         Debug.Log(Color.white);
         r.color = Color.red;
         yield return new WaitForSeconds(colorChangerLength);

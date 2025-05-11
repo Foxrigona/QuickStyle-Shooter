@@ -7,10 +7,9 @@ public class HealthDisplayer : MonoBehaviour
 {
     private TextMeshProUGUI healthDisplay;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         healthDisplay = GetComponent<TextMeshProUGUI>();
-        changeHealth(20, 20);
     }
 
     public void changeHealth(int maxHealth, int currentHealth)
